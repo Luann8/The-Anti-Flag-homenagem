@@ -23,6 +23,7 @@
             background-size: cover;
             background-position: center;
             padding: 300px 0;
+            height: 200px; /* Adjust the height as needed */
             color: #fff;
             animation: rotateBackground 12s linear infinite;
         }
@@ -35,12 +36,14 @@
         width: 100%;
     }
 
-        @keyframes rotateBackground {
-            00% { background-image: url("https://3.bp.blogspot.com/-zfzOIh4xqLY/UcHY2sW8TRI/AAAAAAAADm4/RRlEQ507H90/s1600/2013-06-16+Anti+Flag-1.jpg"); }
-            25% { background-image: url("https://spotlightreport.net/wp-content/uploads/2015/09/antiflag-interview-2015.jpg"); }
-            50% { background-image: url("https://th.bing.com/th/id/R.5c405a08eb4e499af49fe26d8cc9b147?rik=egzcTwndC%2fSsog&pid=ImgRaw&r=0"); }
-            75% { background-image: url("https://th.bing.com/th/id/R.47b129892e566f96184f6944ea9989e1?rik=i67dWu79A%2b4lFA&pid=ImgRaw&r=0"); }
-        }
+    @keyframes rotateBackground {
+    0%, 100% { background-image: url("https://3.bp.blogspot.com/-zfzOIh4xqLY/UcHY2sW8TRI/AAAAAAAADm4/RRlEQ507H90/s1600/2013-06-16+Anti+Flag-1.jpg"); }
+    20% { background-image: url("https://spotlightreport.net/wp-content/uploads/2015/09/antiflag-interview-2015.jpg"); }
+    40% { background-image: url("https://th.bing.com/th/id/R.5c405a08eb4e499af49fe26d8cc9b147?rik=egzcTwndC%2fSsog&pid=ImgRaw&r=0"); }
+    60% { background-image: url("https://th.bing.com/th/id/R.47b129892e566f96184f6944ea9989e1?rik=i67dWu79A%2b4lFA&pid=ImgRaw&r=0"); }
+    80% { background-image: url("https://3.bp.blogspot.com/-zfzOIh4xqLY/UcHY2sW8TRI/AAAAAAAADm4/RRlEQ507H90/s1600/2013-06-16+Anti+Flag-1.jpg"); }
+}
+
         
         .footer {
             background-color: #333; /* Cor de fundo do rodapé em branco */
@@ -136,7 +139,7 @@
         }
     
         #barra-de-links {
-  background-color: #fff;
+  background-color: #000000;
   position: fixed;
   top: 0;
   left: 0;
@@ -154,7 +157,7 @@
 }
 
 #barra-de-links a:hover {
-  background-color: #000000;
+  background-color: #ccc;
 }
 
     
@@ -168,7 +171,7 @@
         </div>
     </header>
     <nav class="box">
-    <h2>Nos somos a Anti-Flag</h2>
+    <h2>Conheça a Anti-Flag</h2>
     <div id="barra-de-links" class="sticky">
     <ul>
         <li><a href="#band-members">membros</a></li>
@@ -182,7 +185,6 @@
     <div class="box">
     <h2>Anti-Flag: A banda punk que se tornou um ícone do ativismo</h2>
         <p>Os Anti-Flag são uma banda de punk rock formada em Pittsburgh, Pensilvânia, em 1988. A banda é conhecida por suas letras politizadas e ativistas, que abordam temas como guerra, justiça social, direitos humanos e pacifismo.</p>
-    </div>
 
     <div class="box band-members">
     <section id="band-members">
@@ -215,10 +217,10 @@
 
     </section>
 </div>
-
+    </div>
     <div class="box">
         <section id="musicas">
-        <h2>Alguns dos principais temas das letras dos Anti-Flag</h2>
+            <h2>Alguns dos principais temas das letras dos Anti-Flag</h2>
         <ul>
             <p>Guerra</p>
             <p>Justiça social</p>
@@ -228,30 +230,29 @@
             <p>Imperialismo</p>
             <p>Discriminação</p>
         </ul>
+        <div class="box">
+            <h2> musicas</h2>
 
+            <iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/artist/3036/top_tracks" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
+        </div>
 </div>    
-    <div class="box">
-        <iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/artist/3036/top_tracks" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
-    </div>
-
-    </div>
-    <section id="menu">
-    <div class="box">
+<div class="box">
+    <section id="shows">
         <h2>Próximos Shows</h2>
         <p>A banda Anti-Flag anunciou sua separação em 2023 desede ai a banda não tem mais shows agendados.</p>
         <p>O último show da banda foi realizado em 23 de julho de 2023, em Pittsburgh, Pensilvânia, Estados Unidos.</p>
     </div>
-
-    <div class="box">
+        <div class="box">
         <section id="videos">
-        <h2>Videos</h2>
-        <p>Veja um dos videos.</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/G9oouZB9bFY?si=5nU1lQzrDnltxWul&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Z5jZVRGG_C0?si=PHZMcNbCuEcgM-yD&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <div>
-        <a href="https://www.youtube.com/channel/UCcA08fGorzCJzPCIATs-Gtg" class="youtube-button" target="_blank">
-            <i class="fab fa-youtube"></i>Y o u T u b e
-        </a>
+    <h2>Videos</h2>
+    <p>Veja um dos videos.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/G9oouZB9bFY?si=5nU1lQzrDnltxWul&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z5jZVRGG_C0?si=PHZMcNbCuEcgM-yD&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div>
+    <a href="https://www.youtube.com/channel/UCcA08fGorzCJzPCIATs-Gtg" class="youtube-button" target="_blank">
+        <i class="fab fa-youtube"></i>Y o u T u b e
+    </a>
+    </div>
        </section>
     </div>
 </div> 
@@ -263,7 +264,7 @@
         <script>
             $(document).ready(function() {
               // Obtém a posição do texto
-              var texto = $("#slideshow").find("h2").first();
+              var texto = $("#slideshow");
               var posicao = texto.offset();
           
               // Define a posição da barra de links
