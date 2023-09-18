@@ -18,7 +18,12 @@
             color: #333;
             text-align: center;
         }
-
+        
+/* Dark mode styles */
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
         header {
             text-align: center;
             background-size: cover;
@@ -47,9 +52,10 @@
 
         
         .footer {
-            background-color: #333; /* Cor de fundo do rodapé em branco */
+            background-color: #000000; /* Cor de fundo do rodapé em branco */
             padding: 10px 0;
             color: #fff;
+            
         }
 
         h2{
@@ -98,7 +104,10 @@
         .box:hover {
             background-color: #ddd;
         }
-        
+        .box.dark-mode {
+        background-color: #000000;
+        color: #ccc;
+}
         .youtube-button {
             display: inline-block;
             background-color: #ff0000; /* YouTube red */
@@ -145,48 +154,67 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: 60px;
   z-index: 10;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: white;;
 }
 
 #barra-de-links a {
   color: #eee;
   text-decoration: none;
-  padding: 10px;
+  padding: 5px;
   display: inline-block;
 }
 
 #barra-de-links a:hover {
   background-color: #ccc;
+width: 100px;
+}
+.animated-button {
+  background-color: #ccc;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
-    
+/* Animação quando o mouse passa por cima */
+.animated-button:hover {
+  background-color: #000000;
+}
     </style>
 </head>
 <body>
     <header>
-    
+        <section id="menu">  
         <div class="logo">
             <img src="https://raw.githubusercontent.com/Luann8/The-Anti-Flag-homenagem/main/antiflag-5b19eb25ee5bf.png" alt="Logo">
-        </div>
-    </header>
-    <nav class="box">
-    <h2>Conheça a Anti-Flag</h2>
-    <div id="barra-de-links" class="sticky">
-    <ul>
-        <li><a href="#band-members">membros</a></li>
-        <li><a href="#musicas">músicas</a></li>
-        <li><a href="#menu">shows</a></li>
-        <li><a href="#videos">videos</a></li>
-    </div>
-</nav>
-    </ul>
+    </header>        
+</div>
+<nav>
+</body>            
 
-    <div class="box">
+    <div id="barra-de-links" class="sticky">
+            <ul>
+                <a href="#" id="dark-mode-toggle" class="animated-button" style="color: #000000;">Alternar modo</a>
+                <li><a href="#menu">i n i c i o</a></li>
+                    <li><a href="#band-members">m e m b r os </a></li>
+                    <li><a href="#musicas">m ú s i c a s</a></li>
+                    <li><a href="#Shows">s h o w s</a></li>
+                    <li><a href="#videos">v i d e o s</a></li>
+                </div>
+                </ul>
+            </nav>    
+            <div class="box">
     <h2>Anti-Flag: A banda punk que se tornou um ícone do ativismo</h2>
         <p>Os Anti-Flag são uma banda de punk rock formada em Pittsburgh, Pensilvânia, em 1988. A banda é conhecida por suas letras politizadas e ativistas, que abordam temas como guerra, justiça social, direitos humanos e pacifismo.</p>
-
+        
     <div class="box band-members">
     <section id="band-members">
         <h2>Membros da banda</h2>
@@ -232,16 +260,17 @@
             <p>Discriminação</p>
         </ul>
         <div class="box">
-            <h2> músicas</h2>
+            <h2> musicas</h2>
 
             <iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/artist/3036/top_tracks" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
         </div>
 </div>    
 <div class="box">
-    <section id="menu">
+    <section id="Shows">
         <h2>Próximos Shows</h2>
         <p>A banda Anti-Flag anunciou sua separação em 2023 desede ai a banda não tem mais shows agendados.</p>
         <p>O último show da banda foi realizado em 23 de julho de 2023, em Pittsburgh, Pensilvânia, Estados Unidos.</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97183.31937641121!2d-80.06290068415547!3d40.43146986979246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f16f48068503%3A0x8df915a15aa21b34!2sPitsburgo%2C%20PA%2C%20EUA!5e0!3m2!1spt-BR!2sbr!4v1695047984593!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
         <div class="box">
         <section id="videos">
@@ -272,5 +301,23 @@
               $("#barra-de-links").css("top", posicao.top + texto.height());
             });
         </script>
-    </body>
+    <script>
+         function toggleDarkMode() {
+            const body = document.body;
+            const boxes = document.querySelectorAll('.box');
+
+            body.classList.toggle('dark-mode'); // Alterna a classe 'dark-mode' no elemento body
+
+            boxes.forEach(box => {
+                box.classList.toggle('dark-mode'); // Alterna a classe 'dark-mode' em elementos com a classe 'box'
+            });
+        }
+            // Event listener para o botão de alternância do modo escuro
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        if (darkModeToggle) {
+            darkModeToggle.addEventListener('click', toggleDarkMode);
+        }
+
+    </script>    
+</body>
     </html>
