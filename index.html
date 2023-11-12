@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Anti-Flag</title>
 
+    
     <style>
         body {
             margin: 0;
@@ -56,16 +57,17 @@
         nav ul {
             list-style-type: none;
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             align-items: center;
             margin: 0;
             padding: 0;
         }
-        
+    
         nav ul li {
             display: inline;
+            margin-right: 10px;
         }
-        
+    
         nav ul li a {
             text-decoration: none;
             color: #fff;
@@ -76,20 +78,17 @@
             margin-right: 5px;
             margin-left: 5px;
             display: flex;
-            align-items: center; /* Center the content vertically */
+            align-items: center;
         }
-
-        nav {
-            margin: auto;
+    
+        .toggle-button {
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+            color: #bbb;
+            font-weight: bold;
+            margin-left: 10px;
         }
-
-    .toggle-button {
-        padding: 10px;
-        cursor: pointer;
-        border: none;
-        color: #bbb;
-        font-weight: bold;
-    }
         
         .box {
             background-color: #f2f2f2;
@@ -115,7 +114,7 @@
             background-color: #ff0000;
             color: #fff;
             text-decoration: none;
-            padding: 10px 15px; /* Ajuste o espaçamento conforme necessário */
+            padding: 10px 15px;
             border-radius: 5px;
             font-weight: bold;
             transition: background-color 0.3s ease;
@@ -150,14 +149,13 @@
             object-fit: cover;
         }
 
+        
         #barra-de-links {
             background-color: #000000;
             position: fixed;
             top: 0;
-            left: 0;
-            right: 5;
             width: 100%;
-            height: 50px;
+            height: 40px; /* Altura reduzida para tornar mais compacto */
             z-index: 10;
             box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
             font-family: Arial, sans-serif;
@@ -166,47 +164,36 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 20px;
+            padding: 5px; /* Espaçamento interno reduzido */
         }
-        
-        #barra-de-links ul {
-            margin: 0;
-            padding: 0;
-        }
-        
-        #barra-de-links li {
-            list-style-type: none;
-        }
-        
+
         #barra-de-links a {
-            color: #eee;
+            color: white;
             text-decoration: none;
-            padding: 10px;
-            display: flex;
-            align-items: center;
-            transition: background-color 0.3s ease;
+            font-size: 16px; /* Tamanho do texto reduzido */
+            margin: 0 8px; /* Margens reduzidas */
+            transition: color 0.3s ease;
         }
-        
-        #barra-de-links a i {
+
+        #barra-de-links i {
             margin-right: 5px;
+            font-size: 20px; /* Tamanho do ícone reduzido */
         }
-        
-        #barra-de-links a:first-child {
-            margin-left: auto;
-        }
-        
+
         #barra-de-links a:hover {
-            background-color: #ccc;
-            width: 100px;
+            color:#b9b622; /* Cor de destaque ao passar o mouse sobre o ícone */
         }
-    
-        
+
+        #dark-mode-toggle {
+            cursor: pointer;
+            font-size: 20px; /* Tamanho do botão reduzido */
+        }
 
         .animated-button {
             background-color: rgb(1, 63, 155);
             color: rgb(8, 16, 131);
             border: none;
-            padding: 10px;
+            padding: 20px;
             border-radius: 5px;
             cursor: pointer;
             font-size: 13px;
@@ -216,9 +203,9 @@
         }
 
         .animated-button:hover {
-            background-color: #000000;
+            background-color: rgb(25, 142, 189) 20);
         }
-
+    
     </style>
     </head>
 
