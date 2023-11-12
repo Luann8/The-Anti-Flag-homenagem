@@ -1,147 +1,141 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/Luann8/The-Anti-Flag-homenagem/main/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Anti-Flag</title>
+
     <style>
-        /* Estilos existentes permanecem inalterados */
         body {
-            animation-fill-mode: both;
             margin: 0;
             padding: 0;
             background-color: #fff;
             color: #333;
             text-align: center;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
-
+        
+        body.dark-mode {
+            background-color: #333;
+            color: #000000;
+        }
+        
         @keyframes rotateBackground {
-            0%, 100% { background-image: url("https://3.bp.blogspot.com/-zfzOIh4xqLY/UcHY2sW8TRI/AAAAAAAADm4/RRlEQ507H90/s1600/2013-06-16+Anti+Flag-1.jpg"); }
-            25% { background-image: url("https://3.bp.blogspot.com/-8Sqj5JI9K3g/UcHZAWF5ynI/AAAAAAAADnI/6J2uNbhNWQE/s1600/2013-06-16+Anti+Flag-9.jpg"); }
-            50% { background-image: url("https://voir.ca/voir-content/blogs.dir/254/files/2016/05/3-anti-flag-6;1200x630.jpg"); }
-            75% { background-image: url("https://3.bp.blogspot.com/-_N8wEMIe1_w/Vz0m8Vdw9yI/AAAAAAAAJ9E/Ph_em_IDkjo24NFmaREw_dofc1eNcMahQCLcB/s1600/Anti-Flag%2Bat%2BVelvet%2BUnderground-5.jpg"); }
-
-        }
-        
-        @keyframes fadeInOut {
             0%, 100% {
-                opacity: 0;
-                z-index: 1;
+                background-image: url("https://3.bp.blogspot.com/-zfzOIh4xqLY/UcHY2sW8TRI/AAAAAAAADm4/RRlEQ507H90/s1600/2013-06-16+Anti+Flag-1.jpg");
             }
-            20%, 80% {
-                opacity: 1;
-                z-index: 2;
+            25% {
+                background-image: url("https://3.bp.blogspot.com/-8Sqj5JI9K3g/UcHZAWF5ynI/AAAAAAAADnI/6J2uNbhNWQE/s1600/2013-06-16+Anti+Flag-9.jpg");
+            }
+            50% {
+                background-image: url("https://voir.ca/voir-content/blogs.dir/254/files/2016/05/3-anti-flag-6;1200x630.jpg");
+            }
+            75% {
+                background-image: url("https://3.bp.blogspot.com/-_N8wEMIe1_w/Vz0m8Vdw9yI/AAAAAAAAJ9E/Ph_em_IDkjo24NFmaREw_dofc1eNcMahQCLcB/s1600/Anti-Flag%2Bat%2BVelvet%2BUnderground-5.jpg");
             }
         }
         
-/* Dark mode styles */
-.dark-mode {
-    background-color: #333;
-    color: #fff;
-}
         header {
             text-align: center;
             background-size: cover;
             background-position: center;
             padding: 300px 0;
-            height: 200px; /* Adjust the height as needed */
+            height: 200px;
             color: #fff;
             animation: rotateBackground 12s linear infinite;
         }
-
-        link{
-        background-color: transparent;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-    }
- 
+        
         .footer {
-            background-color: #000000; /* Cor de fundo do rodapé em branco */
+            background-color: #000000;
             padding: 10px 0;
             color: #fff;
-            
         }
-
-        h2{
-        text-align: center;
-        font-size: 27px;
-    }
         
-        h1, p {
-            text-align: center;
-            font-size: 20px;
-        }
-
         nav ul {
             list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 0;
+            padding: 0;
         }
-
+        
         nav ul li {
             display: inline;
-            margin: 0 20px;
         }
-
+        
         nav ul li a {
             text-decoration: none;
             color: #fff;
             cursor: pointer;
             background-color: #333;
-            padding: 20px 30px;
+            padding: 20px 15px;
             border-radius: 5px;
+            margin-right: 5px;
+            margin-left: 5px;
+            display: flex;
+            align-items: center; /* Center the content vertically */
         }
 
-        .logo img {
-            max-width: 200px;
+        nav {
+            margin: auto;
         }
 
+    .toggle-button {
+        padding: 10px;
+        cursor: pointer;
+        border: none;
+        color: #bbb;
+        font-weight: bold;
+    }
+        
         .box {
             background-color: #f2f2f2;
             border: 1px solid #ccc;
             padding: 20px;
             margin: 20px;
-            display: cover;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s ease;
         }
-
+        
         .box:hover {
             background-color: #ddd;
         }
+        
         .box.dark-mode {
-        background-color: #000000;
-        color: #ccc;
-}
+            background-color: #000000;
+            color: #ccc;
+        }
+        
         .youtube-button {
             display: inline-block;
-            background-color: #ff0000; /* YouTube red */
+            background-color: #ff0000;
             color: #fff;
             text-decoration: none;
-            padding: 10px 20px;
+            padding: 10px 15px; /* Ajuste o espaçamento conforme necessário */
             border-radius: 5px;
             font-weight: bold;
             transition: background-color 0.3s ease;
         }
-
+        
         .youtube-button:hover {
-            background-color: #cc0000; /* Slightly darker red on hover */
+            background-color: #cc0000;
         }
         
         .band-members {
             background-color: #f2f2f2;
             padding: 20px;
         }
-
+        
         .band-member {
             display: flex;
             align-items: center;
             margin-bottom: 20px;
         }
-
+        
         .band-member-image {
             width: 100px;
             height: 100px;
@@ -149,77 +143,112 @@
             margin-right: 20px;
             overflow: hidden;
         }
-
+        
         .band-member-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-    
+
         #barra-de-links {
-  background-color: #000000;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  z-index: 10;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  color: white;;
-}
+            background-color: #000000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 60px;
+            z-index: 10;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        #barra-de-links a {
+            color: #eee;
+            text-decoration: none;
+            padding: 10px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center; /* Center the content vertically */
+        }
 
-#barra-de-links a {
-  color: #eee;
-  text-decoration: none;
-  padding: 5px;
-  display: inline-block;
-}
+        #barra-de-links ul {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #barra-de-links li {
+            list-style-type: none;
+        }
+        
+        #barra-de-links a {
+            color: #eee;
+            text-decoration: none;
+            padding: 10px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center; /* Center the content vertically */
+        }
+        
+        #barra-de-links a:hover {
+            background-color: #ccc;
+            width: 100px;
+        }
+        
 
-#barra-de-links a:hover {
-  background-color: #ccc;
-width: 100px;
-}
-.animated-button {
-  background-color: #ccc;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
+        .animated-button {
+            background-color: rgb(1, 63, 155);
+            color: rgb(8, 16, 131);
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            height: 15px;
+        }
 
-/* Animação quando o mouse passa por cima */
-.animated-button:hover {
-  background-color: #000000;
-}
+        .animated-button:hover {
+            background-color: #000000;
+        }
+
     </style>
-</head>
+    </head>
+
 <body>
     <header>
-        <section id="menu">  
         <div class="logo">
             <img src="https://raw.githubusercontent.com/Luann8/The-Anti-Flag-homenagem/main/antiflag-5b19eb25ee5bf.png" alt="Logo">
-    </header>        
-</div>
-<nav>
-</body>            
-
+        </div>
+    </header>
+    
     <div id="barra-de-links" class="sticky">
+        <nav>
             <ul>
-                <a href="#" id="dark-mode-toggle" class="animated-button" style="color: #000000;">🔆 Dark Mode</a>
-                <li><a href="#menu">I n i c i o</a></li>
-                    <li><a href="#band-members">M e m b r os </a></li>
-                    <li><a href="#musicas">M ú s i c a s</a></li>
-                    <li><a href="#Shows">S h o w s</a></li>
-                    <li><a href="#videos">V i d e o s</a></li>
-                </div>
-                </ul>
-            </nav>    
-            <div class="box">
+                <a id="dark-mode-toggle" class="animated-button" style="color: rgb(26, 17, 160);">🔆</a>
+                <li><a href="#menu">Início</a></li>
+                <li><a href="#band-members">Membros</a></li>
+                <li><a href="#musicas">Músicas</a></li>
+                <li><a href="#Shows">Shows</a></li>
+                <li><a href="#videos">Vídeos</a></li>
+
+            </ul>
+        </nav>
+
+    </div>
+        </div>
+    
+        <div class="box">
+                
     <h2>Anti-Flag: A banda punk que se tornou um ícone do ativismo</h2>
         <p>Os Anti-Flag são uma banda de punk rock formada em Pittsburgh, Pensilvânia, em 1988. A banda é conhecida por suas letras politizadas e ativistas, que abordam temas como guerra, justiça social, direitos humanos e pacifismo.</p>
         
@@ -316,23 +345,23 @@ width: 100px;
               $("#barra-de-links").css("top", posicao.top + texto.height());
             });
         </script>
-    <script>
-         function toggleDarkMode() {
-            const body = document.body;
-            const boxes = document.querySelectorAll('.box');
-
-            body.classList.toggle('dark-mode'); // Alterna a classe 'dark-mode' no elemento body
-
-            boxes.forEach(box => {
-                box.classList.toggle('dark-mode'); // Alterna a classe 'dark-mode' em elementos com a classe 'box'
-            });
-        }
-            // Event listener para o botão de alternância do modo escuro
-        const darkModeToggle = document.getElementById('dark-mode-toggle');
-        if (darkModeToggle) {
-            darkModeToggle.addEventListener('click', toggleDarkMode);
-        }
-
-    </script>    
+        <script>
+            function toggleDarkMode() {
+                const body = document.body;
+                const boxes = document.querySelectorAll('.box');
+    
+                body.classList.toggle('dark-mode'); // Alterna a classe 'dark-mode' no elemento body
+    
+                boxes.forEach(box => {
+                    box.classList.toggle('dark-mode'); // Alterna a classe 'dark-mode' em elementos com a classe 'box'
+                });
+            }
+                // Event listener para o botão de alternância do modo escuro
+            const darkModeToggle = document.getElementById('dark-mode-toggle');
+            if (darkModeToggle) {
+                darkModeToggle.addEventListener('click', toggleDarkMode);
+            }
+    
+        </script>
 </body>
     </html>
