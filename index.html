@@ -9,13 +9,22 @@
     <title>The Anti-Flag</title>
     <style>
         /* Estilos existentes permanecem inalterados */
+@keyframes rotateBackground {
+    0%, 100% { background-image: url("https://3.bp.blogspot.com/-zfzOIh4xqLY/UcHY2sW8TRI/AAAAAAAADm4/RRlEQ507H90/s1600/2013-06-16+Anti+Flag-1.jpg"); }
+    20% { background-image: url("https://spotlightreport.net/wp-content/uploads/2015/09/antiflag-interview-2015.jpg"); }
+    40% { background-image: url("https://th.bing.com/th/id/R.5c405a08eb4e499af49fe26d8cc9b147?rik=egzcTwndC%2fSsog&pid=ImgRaw&r=0"); }
+    60% { background-image: url("https://th.bing.com/th/id/R.47b129892e566f96184f6944ea9989e1?rik=i67dWu79A%2b4lFA&pid=ImgRaw&r=0"); }
+    80% { background-image: url("https://3.bp.blogspot.com/-zfzOIh4xqLY/UcHY2sW8TRI/AAAAAAAADm4/RRlEQ507H90/s1600/2013-06-16+Anti+Flag-1.jpg"); }
+}
 
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #fff;
-            color: #333;
-            text-align: center;
+body {
+    animation: rotateBackground 20s infinite;
+    animation-fill-mode: both;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
         }
         
 /* Dark mode styles */
@@ -40,16 +49,7 @@
         left: 0;
         width: 100%;
     }
-
-    @keyframes rotateBackground {
-    0%, 100% { background-image: url("https://3.bp.blogspot.com/-zfzOIh4xqLY/UcHY2sW8TRI/AAAAAAAADm4/RRlEQ507H90/s1600/2013-06-16+Anti+Flag-1.jpg"); }
-    20% { background-image: url("https://spotlightreport.net/wp-content/uploads/2015/09/antiflag-interview-2015.jpg"); }
-    40% { background-image: url("https://th.bing.com/th/id/R.5c405a08eb4e499af49fe26d8cc9b147?rik=egzcTwndC%2fSsog&pid=ImgRaw&r=0"); }
-    60% { background-image: url("https://th.bing.com/th/id/R.47b129892e566f96184f6944ea9989e1?rik=i67dWu79A%2b4lFA&pid=ImgRaw&r=0"); }
-    80% { background-image: url("https://3.bp.blogspot.com/-zfzOIh4xqLY/UcHY2sW8TRI/AAAAAAAADm4/RRlEQ507H90/s1600/2013-06-16+Anti+Flag-1.jpg"); }
-}
-
-        
+ 
         .footer {
             background-color: #000000; /* Cor de fundo do rodapé em branco */
             padding: 10px 0;
